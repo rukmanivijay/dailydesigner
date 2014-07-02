@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613004440) do
+ActiveRecord::Schema.define(version: 20140702230549) do
 
   create_table "dailydesignerapps", force: true do |t|
     t.string   "name"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 20140613004440) do
 
   create_table "invite_pages", force: true do |t|
     t.string   "name"
+    t.string   "sex"
+    t.string   "state"
+    t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logins", force: true do |t|
+    t.string   "username"
+    t.string   "password"
     t.string   "sex"
     t.string   "state"
     t.string   "city"

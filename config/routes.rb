@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  #Making the login the first page.
+  root 'logins#index'
+
+  resources :logins
+
   resources :dailydesignerapps do 
     collection do
       get 'main'
@@ -12,6 +18,7 @@ Rails.application.routes.draw do
       get 'winter'
     end
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
